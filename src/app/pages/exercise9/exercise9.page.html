@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>exercise9</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Text" labelPlacement="stacked" placeholder="Enter your text"
+    [(ngModel)]="userInput" (ionChange)="calculateCounts()"></ion-input>
+  </ion-item>
+  <div>
+    <p><b>Word Count:</b> {{ wordCount }}</p>
+    <p><b>Vowel Count:</b> {{ vowelCount }}</p>
+  </div>
+</ion-content>
